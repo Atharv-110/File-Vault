@@ -1,11 +1,13 @@
 package service;
 
+import key.PassKey;
+
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
-public class SendOTPService {
+public class SendOTPService extends PassKey {
     public static void sendOTP(String email, String genOTP) {
         // Recipient's email ID needs to be mentioned.
         String to = email;
@@ -30,7 +32,7 @@ public class SendOTPService {
 
             protected PasswordAuthentication getPasswordAuthentication() {
 
-                return new PasswordAuthentication(from, "");
+                return new PasswordAuthentication(from, PassKey.passKey);
 
             }
 

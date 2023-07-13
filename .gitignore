@@ -39,3 +39,6 @@ build/
 
 #Pass Key
 key
+
+#ignore this file itself
+.gitignore
