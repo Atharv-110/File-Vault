@@ -1,3 +1,5 @@
+.gitignore
+
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -40,5 +42,3 @@ build/
 #Pass Key
 key
 
-#ignore this file itself
-.gitignore
