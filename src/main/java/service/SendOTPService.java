@@ -1,6 +1,6 @@
 package service;
 
-import key.PassKey;
+import pass.PassKey;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -31,7 +31,6 @@ public class SendOTPService extends PassKey {
         Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
 
             protected PasswordAuthentication getPasswordAuthentication() {
-
                 return new PasswordAuthentication(from, PassKey.passKey);
 
             }

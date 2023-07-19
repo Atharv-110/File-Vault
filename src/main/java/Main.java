@@ -1,4 +1,3 @@
-import key.PassKey;
 import views.Welcome;
 
 public class Main {
@@ -7,5 +6,6 @@ public class Main {
             do {
                 w.welcomeScreen();
             } while (true);
+
     }
 }

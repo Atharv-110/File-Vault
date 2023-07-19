@@ -4,6 +4,7 @@ import dao.UserDAO;
 import model.User;
 import service.GenerateOTP;
 import service.SendOTPService;
+import service.UserService;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -36,7 +37,7 @@ public class Welcome {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter your name : ");
         String name = sc.nextLine();
-        System.out.print("Enter you Email : ");
+        System.out.print("Enter your Email : ");
         String email = sc.nextLine();
         String genOTP = GenerateOTP.getOTP();
         SendOTPService.sendOTP(email, genOTP);
@@ -44,13 +45,20 @@ public class Welcome {
         String otp = sc.nextLine();
         if (otp.equals(genOTP)) {
             User user = new User(name, email);
+            int response = UserService.saveUser(user);
+            switch (response) {
+                case 0 -> System.out.println(email + " have been already registered!!");
+                case 1 -> System.out.println("User Registration - SUCCESS");
+            }
         } else {
             System.out.println("Incorrect OTP!!");
         }
+
     }
 
     private void login() {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your Email : ");
         String email = sc.nextLine();
         try {
             if (UserDAO.isExists(email)) {
