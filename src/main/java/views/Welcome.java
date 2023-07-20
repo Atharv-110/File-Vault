@@ -16,9 +16,9 @@ public class Welcome {
     public void welcomeScreen() {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Welcome to the Application :");
-        System.out.println("Press 1 to Login");
-        System.out.println("Press 2 to Sign Up");
-        System.out.println("Press 0 to Exit");
+        System.out.println("Press 1 : To Login");
+        System.out.println("Press 2 : To Sign Up");
+        System.out.println("Press 0 : To Exit");
 
         int choice = 0;
         try {
@@ -67,7 +67,8 @@ public class Welcome {
                 System.out.print("Enter the OTP : ");
                 String otp = sc.nextLine();
                 if (otp.equals(genOTP)) {
-                    System.out.println("Welcome");
+                    new UserView(email).home();
+
                 } else {
                     System.out.println("Incorrect OTP!!");
                 }

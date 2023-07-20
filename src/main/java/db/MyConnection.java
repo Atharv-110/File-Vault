@@ -6,6 +6,7 @@ import java.sql.*;
 
 public class MyConnection {
     public static Connection connection;
+
     public static Connection getConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -19,7 +20,7 @@ public class MyConnection {
     }
 
     public static void closeConnection() {
-        if(connection!= null) {
+        if (connection != null) {
             try {
                 connection.close();
             } catch (SQLException e) {

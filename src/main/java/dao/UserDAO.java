@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserDAO {
-    public static boolean isExists(String email)throws SQLException {
+    public static boolean isExists(String email) throws SQLException {
         Connection connection = MyConnection.getConnection();
         PreparedStatement ps = connection.prepareStatement("SELECT email FROM users");
         ResultSet rs = ps.executeQuery();
@@ -22,7 +22,7 @@ public class UserDAO {
         return false;
     }
 
-    public static int saveUser(User user) throws  SQLException {
+    public static int saveUser(User user) throws SQLException {
         Connection connection = MyConnection.getConnection();
         PreparedStatement ps = connection.prepareStatement("INSERT INTO users VALUES(default, ?, ?)");
         ps.setString(1, user.getName());
