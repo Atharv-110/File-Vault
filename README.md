@@ -9,7 +9,7 @@ Java-powered **command-line** software, seamlessly tucking away and unveiling fi
   - File is stored in the form of binary data in database so it's very hard to decrypt.
 - You can see all the hidden files available on your account.
 # Tech Stack:
-- Java:
+[In progress...]
 ## Demonstration Video:
 https://github.com/Atharv-110/File-Vault/assets/87393095/f27c04af-3e7a-44bc-a2b8-289ff89850e9
 
