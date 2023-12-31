@@ -1,4 +1,5 @@
-![file-vault-banner](https://github.com/Atharv-110/File-Vault/assets/87393095/42063885-6a18-4312-aaa9-beb742f1d368)
+![file-vault-banner](https://github.com/Atharv-110/File-Vault/assets/87393095/b85983b0-a1c8-4990-85f6-a7487bf6757d)
+
 # File-Vault
 > Securely Conceal and Reveal Files with File Vault
 ## What is File Vault?
